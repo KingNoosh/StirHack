@@ -20,26 +20,15 @@ final class StatusAction
     public function dispatch(Request $request, Response $response, $args)
     {
         $this->logger->info("Status api action dispatched");
-
-        $arrData = [
-            "id"        => 3,
-            "timestamp" => 1455375840,
-            "data" => [
-                [
-                    "id"    => "ApiName1",
-                    "alive" => true,
-                    "code"  => 200
-                ],
-                [
-                    "id"    => "ApiName2",
-                    "alive" => false,
-                    "code"  => 500
-                ]
-            ]
-        ];
-
+        $status = \App\Model\LogQuery::create()
+            ->orderByTimestamp('desc')
+            ->limit(1)
+            ->find()
+            ->toArray();
+        $status = $status[0];
+        $status['Data'] = json_decode($status['Data']);
         $response->withHeader('Content-Type', 'application/json');
-        $response->write(json_encode($arrData));
+        $response->write(json_encode($status));
         return $response;
     }
 }

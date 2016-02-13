@@ -9,6 +9,11 @@
             "name": "Rob Allen",
             "email": "rob@akrabat.com",
             "homepage": "http://akrabat.com"
+        },
+        {
+            "name": "Anosh Malik",
+            "email": "me@ano.sh",
+            "homepage": "http://ano.sh"
         }
     ],
     "autoload": {
@@ -20,6 +25,7 @@
         "slim/slim": "^3.0",
         "slim/twig-view": "^2.0",
         "slim/flash": "^0.1.0",
-        "monolog/monolog": "^1.13"
+        "monolog/monolog": "^1.13",
+        "propel/propel": "~2.0@dev"
     }
 }
