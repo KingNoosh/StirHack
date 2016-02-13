@@ -22,15 +22,19 @@ final class StatusAction
         $this->logger->info("Status api action dispatched");
 
         $arrData = [
-            [
-                "id"    => "ApiName1",
-                "alive" => true,
-                "code"  => 200
-            ],
-            [
-                "id"    => "ApiName2",
-                "alive" => false,
-                "code"  => 500
+            "id"        => 3,
+            "timestamp" => 1455375840,
+            "data" => [
+                [
+                    "id"    => "ApiName1",
+                    "alive" => true,
+                    "code"  => 200
+                ],
+                [
+                    "id"    => "ApiName2",
+                    "alive" => false,
+                    "code"  => 500
+                ]
             ]
         ];
 
