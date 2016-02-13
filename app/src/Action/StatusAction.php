@@ -24,7 +24,7 @@ final class StatusAction
         $arrData = [
             [
                 "id"    => "ApiName1",
-                "alive" => false
+                "alive" => true
             ],
             [
                 "id"    => "ApiName2",
