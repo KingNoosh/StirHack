@@ -28,11 +28,13 @@ final class LogAction
                 "data" => [
                     [
                         "id"    => "ApiName1",
-                        "alive" => true
+                        "alive" => true,
+                        "code"  => 200
                     ],
                     [
                         "id"    => "ApiName2",
-                        "alive" => true
+                        "alive" => true,
+                        "code"  => 200
                     ]
                 ]
             ],
@@ -42,11 +44,13 @@ final class LogAction
                 "data" => [
                     [
                         "id"    => "ApiName1",
-                        "alive" => false
+                        "alive" => false,
+                        "code"  => 404
                     ],
                     [
                         "id"    => "ApiName2",
-                        "alive" => false
+                        "alive" => false,
+                        "code"  => 500
                     ]
                 ]
             ],
@@ -56,11 +60,13 @@ final class LogAction
                 "data" => [
                     [
                         "id"    => "ApiName1",
-                        "alive" => true
+                        "alive" => true,
+                        "code"  => 200
                     ],
                     [
                         "id"    => "ApiName2",
-                        "alive" => false
+                        "alive" => false,
+                        "code"  => 500
                     ]
                 ]
             ]
