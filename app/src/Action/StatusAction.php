@@ -6,7 +6,7 @@ use Psr\Log\LoggerInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-final class HomeAction
+final class StatusAction
 {
     private $view;
     private $logger;
@@ -19,9 +19,21 @@ final class HomeAction
 
     public function dispatch(Request $request, Response $response, $args)
     {
-        $this->logger->info("Home page action dispatched");
+        $this->logger->info("Status api action dispatched");
 
-        $this->view->render($response, 'home.twig');
+        $arrData = [
+            [
+                "id"    => "ApiName1",
+                "alive" => false
+            ],
+            [
+                "id"    => "ApiName2",
+                "alive" => false
+            ]
+        ];
+
+        $response->withHeader('Content-Type', 'application/json');
+        $response->write(json_encode($arrData));
         return $response;
     }
 }

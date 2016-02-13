@@ -44,3 +44,6 @@ $container['logger'] = function ($c) {
 $container['App\Action\HomeAction'] = function ($c) {
     return new App\Action\HomeAction($c->get('view'), $c->get('logger'));
 };
+$container['App\Action\StatusAction'] = function ($c) {
+    return new App\Action\StatusAction($c->get('view'), $c->get('logger'));
+};
